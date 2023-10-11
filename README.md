@@ -28,3 +28,5 @@ http://www.neko.ne.jp/~freewing/software/build_fritzing_100_windows/
 * Donation Button  
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=T79HPJ5H79PBU)  
 
+* Youtube  
+[<img src="https://img.youtube.com/vi/wLDuyNqms_g/maxresdefault.jpg" alt="Fritzing 1.0.0を無料でゲットする方法" title="Fritzing 1.0.0を無料でゲットする方法" width="320" height="180"> YouTube https://youtu.be/wLDuyNqms_g](https://youtu.be/wLDuyNqms_g)  
