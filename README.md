@@ -29,4 +29,7 @@ http://www.neko.ne.jp/~freewing/software/build_fritzing_100_windows/
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=T79HPJ5H79PBU)  
 
 * Youtube  
+[<img src="https://img.youtube.com/vi/cC82PULJq6g/maxresdefault.jpg" alt="How to get Fritzing 1.0.0 for free - Compile Fritzing on Windows" title="How to get Fritzing 1.0.0 for free - Compile Fritzing on Windows" width="320" height="180"> YouTube https://youtu.be/cC82PULJq6g](https://youtu.be/cC82PULJq6g)  
+
+* Youtube  
 [<img src="https://img.youtube.com/vi/wLDuyNqms_g/maxresdefault.jpg" alt="Fritzing 1.0.0を無料でゲットする方法" title="Fritzing 1.0.0を無料でゲットする方法" width="320" height="180"> YouTube https://youtu.be/wLDuyNqms_g](https://youtu.be/wLDuyNqms_g)  
