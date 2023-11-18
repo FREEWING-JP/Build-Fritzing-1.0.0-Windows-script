@@ -13,7 +13,15 @@ git clone https://github.com/fritzing/fritzing-app.git -b develop
 cd fritzing-app
 rem Update potis Commits on Jun 3, 2023
 rem equivalent Fritzing 1.0.0
-git pull origin 6b14cfe9016652e47b5da53ce3d199175736e43e
+rem git pull origin 6b14cfe9016652e47b5da53ce3d199175736e43e
+
+rem equivalent Fritzing 1.0.1 Sep 6, 2023
+git pull origin 8f5f1373835050ce014299c78d91c24beea9b633
+
+rem add git tag 1.0.1
+git config --global user.email "you@example.com"
+git config --global user.name "Your Name"
+git tag -a 1.0.1 -m "" 8f5f1373835050ce014299c78d91c24beea9b633
 
 git show --format='%%H' --no-patch
 
