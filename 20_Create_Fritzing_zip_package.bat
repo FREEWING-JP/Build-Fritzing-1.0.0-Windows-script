@@ -7,13 +7,13 @@ cd /d \00_fritzing
 
 ren release64 Fritzing_100
 
-powershell compress-archive .\Fritzing_100 Fritzing_100.zip
+powershell compress-archive .\Fritzing_100 Fritzing_101.zip
 
 ren Fritzing_100 release64
 
 echo .
 echo ===
-dir Fritzing_100.zip
+dir Fritzing_101.zip
 rem Beep
 rundll32 user32.dll,MessageBeep
 timeout /T 1 /NOBREAK
