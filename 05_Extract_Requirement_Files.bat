@@ -1,13 +1,16 @@
 rem 04_Extract_Requirement_Files.bat
 rem http://www.neko.ne.jp/~freewing/software/build_fritzing_100_windows/
-rem Copyright (c) 2023 FREE WING,Y.Sakamoto
+rem Copyright (c) 2023-2024 FREE WING,Y.Sakamoto
 echo %0
 timeout /T 10 /NOBREAK
 cd /d \00_fritzing
 
 UnZip.exe boost_1_81_0.zip .
 UnZip.exe zlib13.zip .
-tar -xf ngspice-40.tar.gz
+tar -xf ngspice-42.tar.gz
+
+ren ngspice-42 ngspice-40
+ren ngspice-42_dll_64.7z ngspice-40_dll_64.7z
 
 if not exist 7zr.exe goto 7z_inst
 

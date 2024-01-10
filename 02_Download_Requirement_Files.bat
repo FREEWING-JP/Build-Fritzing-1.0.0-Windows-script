@@ -1,6 +1,6 @@
 rem 02_Download_Requirement_Files.bat
 rem http://www.neko.ne.jp/~freewing/software/build_fritzing_100_windows/
-rem Copyright (c) 2023 FREE WING,Y.Sakamoto
+rem Copyright (c) 2023-2024 FREE WING,Y.Sakamoto
 echo %0
 timeout /T 10 /NOBREAK
 cd /d \00_fritzing
@@ -36,11 +36,12 @@ rem zlib Home Site
 echo zlib 1.3
 if not exist zlib13.zip DownloadFile https://www.zlib.net/zlib13.zip zlib13.zip
 
-rem https://sourceforge.net/projects/ngspice/files/ng-spice-rework/40/
-echo ngspice-40 ngspice Files
-if not exist ngspice-40.tar.gz DownloadFile https://jaist.dl.sourceforge.net/project/ngspice/ng-spice-rework/40/ngspice-40.tar.gz ngspice-40.tar.gz
+rem https://sourceforge.net/projects/ngspice/files/ng-spice-rework/42/
+echo ngspice-42 ngspice Files
+if not exist ngspice-42.tar.gz DownloadFile https://jaist.dl.sourceforge.net/project/ngspice/ng-spice-rework/42/ngspice-42.tar.gz ngspice-42.tar.gz
 
-if not exist ngspice-40_dll_64.7z DownloadFile https://master.dl.sourceforge.net/project/ngspice/ng-spice-rework/40/ngspice-40_dll_64.7z ngspice-40_dll_64.7z
+if not exist ngspice-42_dll_64.7z DownloadFile https://master.dl.sourceforge.net/project/ngspice/ng-spice-rework/42/ngspice-42_dll_64.7z ngspice-42_dll_64.7z
+
 
 exit
 
