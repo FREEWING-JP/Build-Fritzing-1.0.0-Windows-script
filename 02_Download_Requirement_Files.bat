@@ -44,6 +44,23 @@ if not exist ngspice-42.tar.gz DownloadFile https://jaist.dl.sourceforge.net/pro
 
 if not exist ngspice-42_dll_64.7z DownloadFile https://master.dl.sourceforge.net/project/ngspice/ng-spice-rework/42/ngspice-42_dll_64.7z ngspice-42_dll_64.7z
 
+if not exist PortableGit-2.42.0.2-64-bit.7z.exe goto failed
+if not exist 7zr.exe goto failed
+if not exist vs_BuildTools_2019.exe goto failed
+if not exist qt-unified-windows-x64-4.6.1-online.exe goto failed
+if not exist boost_1_81_0.zip goto failed
+if not exist zlib13.zip goto failed
+if not exist ngspice-42.tar.gz goto failed
+if not exist ngspice-42_dll_64.7z goto failed
 
 exit
+
+:failed
+@echo off
+echo .
+echo ===
+echo Download Error
+echo ===
+rundll32 user32.dll,MessageBeep
+pause
 
