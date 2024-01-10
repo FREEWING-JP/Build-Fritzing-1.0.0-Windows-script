@@ -29,7 +29,9 @@ if not exist qt-unified-windows-x64-4.6.1-online.exe DownloadFile https://d13lb3
 rem https://www.boost.org/users/history/version_1_81_0.html
 echo Boost Version 1.81.0
 rem December 14th, 2022 17:44 GMT
-if not exist boost_1_81_0.zip DownloadFile https://boostorg.jfrog.io/artifactory/main/release/1.81.0/source/boost_1_81_0.zip boost_1_81_0.zip
+rem if not exist boost_1_81_0.zip DownloadFile https://boostorg.jfrog.io/artifactory/main/release/1.81.0/source/boost_1_81_0.zip boost_1_81_0.zip
+
+if not exist boost_1_81_0.zip DownloadFile https://sourceforge.net/projects/boost/files/boost/1.81.0/boost_1_81_0.zip boost_1_81_0.zip
 
 rem https://www.zlib.net/
 rem zlib Home Site
