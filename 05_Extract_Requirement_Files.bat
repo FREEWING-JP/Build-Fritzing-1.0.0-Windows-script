@@ -17,6 +17,15 @@ if not exist 7zr.exe goto 7z_inst
 7zr x PortableGit-2.42.0.2-64-bit.7z.exe -o.\PortableGit
 7zr x ngspice-40_dll_64.7z -o.\
 
+rem for Fritzing 1.0.2
+UnZip.exe clipper_ver6.4.2.zip .\clipper1\6.4.2
+
+UnZip.exe openssl-3.0.12.zip .
+ren openssl-3.0 openssl-3.0.12
+cd openssl-3.0.12
+xcopy /R /S .\x64\* .
+ren lib lib64
+
 exit
 
 

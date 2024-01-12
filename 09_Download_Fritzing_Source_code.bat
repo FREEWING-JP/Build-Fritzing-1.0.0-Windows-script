@@ -16,13 +16,17 @@ rem equivalent Fritzing 1.0.0
 rem git pull origin 6b14cfe9016652e47b5da53ce3d199175736e43e
 
 rem equivalent Fritzing 1.0.1 Sep 6, 2023
-git pull origin 8f5f1373835050ce014299c78d91c24beea9b633
-git checkout 8f5f1373835050ce014299c78d91c24beea9b633
+rem git pull origin 8f5f1373835050ce014299c78d91c24beea9b633
+rem git checkout 8f5f1373835050ce014299c78d91c24beea9b633
 
-rem add git tag 1.0.1
+rem equivalent Fritzing 1.0.2 Dec 20, 2023
+git pull origin dbdbe34c843677df721c7b3fc3e32c0f737e7e95
+git checkout dbdbe34c843677df721c7b3fc3e32c0f737e7e95
+
+rem add git tag 1.0.2
 git config --global user.email "you@example.com"
 git config --global user.name "Your Name"
-git tag -a 1.0.1 -m "" 8f5f1373835050ce014299c78d91c24beea9b633
+git tag -a 1.0.2 -m "" dbdbe34c843677df721c7b3fc3e32c0f737e7e95
 
 git show --format='%%H' --no-patch
 
