@@ -1,3 +1,4 @@
+@echo off
 rem 00_Execute_Script.bat
 rem http://www.neko.ne.jp/~freewing/software/build_fritzing_100_windows/
 rem Copyright (c) 2023 FREE WING,Y.Sakamoto

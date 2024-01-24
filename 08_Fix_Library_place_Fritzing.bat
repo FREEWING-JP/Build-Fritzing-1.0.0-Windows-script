@@ -1,3 +1,4 @@
+@echo off
 rem 11_Fix_Library_place_Fritzing.bat
 rem http://www.neko.ne.jp/~freewing/software/build_fritzing_100_windows/
 rem Copyright (c) 2023-2024 FREE WING,Y.Sakamoto
