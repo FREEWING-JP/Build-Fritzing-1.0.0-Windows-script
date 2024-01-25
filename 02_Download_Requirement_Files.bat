@@ -1,3 +1,4 @@
+@echo off
 rem 02_Download_Requirement_Files.bat
 rem http://www.neko.ne.jp/~freewing/software/build_fritzing_100_windows/
 rem Copyright (c) 2023-2024 FREE WING,Y.Sakamoto
@@ -36,7 +37,7 @@ if not exist boost_1_81_0.zip DownloadFile https://sourceforge.net/projects/boos
 rem https://www.zlib.net/
 rem zlib Home Site
 echo zlib 1.3
-if not exist zlib13.zip DownloadFile https://www.zlib.net/zlib13.zip zlib13.zip
+if not exist zlib131.zip DownloadFile https://www.zlib.net/zlib131.zip zlib131.zip
 
 rem https://sourceforge.net/projects/ngspice/files/ng-spice-rework/42/
 echo ngspice-42 ngspice Files
@@ -61,7 +62,7 @@ if not exist 7zr.exe goto failed
 if not exist vs_BuildTools_2019.exe goto failed
 if not exist qt-unified-windows-x64-4.6.1-online.exe goto failed
 if not exist boost_1_81_0.zip goto failed
-if not exist zlib13.zip goto failed
+if not exist zlib131.zip goto failed
 if not exist ngspice-42.tar.gz goto failed
 if not exist ngspice-42_dll_64.7z goto failed
 rem for Fritzing 1.0.2

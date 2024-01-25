@@ -1,3 +1,4 @@
+@echo off
 rem 12_Fix_Fritzing_Header_files.bat
 rem http://www.neko.ne.jp/~freewing/software/build_fritzing_100_windows/
 rem Copyright (c) 2023 FREE WING,Y.Sakamoto

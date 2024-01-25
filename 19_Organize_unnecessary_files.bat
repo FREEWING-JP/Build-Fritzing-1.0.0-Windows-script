@@ -1,3 +1,4 @@
+@echo off
 rem 19_Organize_unnecessary_files.bat
 rem http://www.neko.ne.jp/~freewing/software/build_fritzing_100_windows/
 rem Copyright (c) 2023 FREE WING,Y.Sakamoto

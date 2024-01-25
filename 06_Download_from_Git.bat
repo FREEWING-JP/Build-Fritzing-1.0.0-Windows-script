@@ -1,3 +1,4 @@
+@echo off
 rem 05_Download_from_Git.bat
 rem http://www.neko.ne.jp/~freewing/software/build_fritzing_100_windows/
 rem Copyright (c) 2023 FREE WING,Y.Sakamoto
