@@ -38,7 +38,7 @@ cd ..
 cd ..
 
 echo Build zlib
-cd zlib-1.3
+cd zlib-1.3.1
 
 rmdir /S /Q build64
 mkdir build64
