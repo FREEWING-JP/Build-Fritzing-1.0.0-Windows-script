@@ -59,7 +59,7 @@ cd ..
 echo Build quazip
 cd quazip-1.4
 
-dir ..\zlib-1.3\build64\Release\zlib.lib
+dir ..\zlib-1.3.1\build64\Release\zlib.lib
 
 set Qt6_DIR=C:\Qt\6.5.3\msvc2019_64
 dir %Qt6_DIR%
@@ -71,8 +71,8 @@ cmake -S . -B build64 ^
   -D QUAZIP_QT_MAJOR_VERSION=6 ^
   -D CMAKE_INSTALL_PREFIX=..\quazip-6.5.3-1.4 ^
   -D QUAZIP_USE_QT_ZLIB=OFF ^
-  -D ZLIB_INCLUDE_DIR=..\zlib-1.3 ^
-  -D ZLIB_LIBRARY=%cd%\..\zlib-1.3\build64\Release\zlib.lib
+  -D ZLIB_INCLUDE_DIR=..\zlib-1.3.1 ^
+  -D ZLIB_LIBRARY=%cd%\..\zlib-1.3.1\build64\Release\zlib.lib
 
 cmake --build build64 --config Release
 cmake --build build64 --config Release --target install

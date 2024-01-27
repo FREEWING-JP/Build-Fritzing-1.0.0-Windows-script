@@ -36,7 +36,7 @@ if not exist boost_1_81_0.zip DownloadFile https://sourceforge.net/projects/boos
 
 rem https://www.zlib.net/
 rem zlib Home Site
-echo zlib 1.3
+echo zlib 1.3.1
 if not exist zlib131.zip DownloadFile https://www.zlib.net/zlib131.zip zlib131.zip
 
 rem https://sourceforge.net/projects/ngspice/files/ng-spice-rework/42/
