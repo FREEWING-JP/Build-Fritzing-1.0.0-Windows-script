@@ -36,8 +36,8 @@ if not exist boost_1_81_0.zip DownloadFile https://sourceforge.net/projects/boos
 
 rem https://www.zlib.net/
 rem zlib Home Site
-echo zlib 1.3.1
-if not exist zlib131.zip DownloadFile https://www.zlib.net/zlib131.zip zlib131.zip
+echo zlib most recent release
+if not exist zlib.tar.gz DownloadFile https://www.zlib.net/current/zlib.tar.gz zlib.tar.gz
 
 rem https://sourceforge.net/projects/ngspice/files/ng-spice-rework/42/
 echo ngspice-42 ngspice Files
@@ -62,7 +62,7 @@ if not exist 7zr.exe goto failed
 if not exist vs_BuildTools_2019.exe goto failed
 if not exist qt-unified-windows-x64-4.6.1-online.exe goto failed
 if not exist boost_1_81_0.zip goto failed
-if not exist zlib131.zip goto failed
+if not exist zlib.tar.gz goto failed
 if not exist ngspice-42.tar.gz goto failed
 if not exist ngspice-42_dll_64.7z goto failed
 rem for Fritzing 1.0.2

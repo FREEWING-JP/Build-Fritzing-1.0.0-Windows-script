@@ -7,7 +7,12 @@ timeout /T 10 /NOBREAK
 cd /d \00_fritzing
 
 UnZip.exe boost_1_81_0.zip .
-UnZip.exe zlib131.zip .
+
+tar -xf zlib.tar.gz
+for /f "usebackq delims=" %%A in (`dir /b ZLIB-*`) do set ZLIB_DIR=%%A
+echo %ZLIB_DIR%
+ren %ZLIB_DIR% zlib-src
+
 tar -xf ngspice-42.tar.gz
 
 ren ngspice-42 ngspice-40
