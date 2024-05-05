@@ -34,6 +34,10 @@ rem if not exist boost_1_81_0.zip DownloadFile https://boostorg.jfrog.io/artifac
 
 if not exist boost_1_81_0.zip DownloadFile https://sourceforge.net/projects/boost/files/boost/1.81.0/boost_1_81_0.zip boost_1_81_0.zip
 
+echo Check file hash for validate
+certutil -hashfile .\boost_1_81_0.zip SHA256 | findstr 6e689b266b27d4db57f648b1e5c905c8acd6716b46716a12f6fc73fc80af842e
+if not "%ERRORLEVEL%" == "0" goto failed
+
 rem https://www.zlib.net/
 rem zlib Home Site
 echo zlib most recent release
