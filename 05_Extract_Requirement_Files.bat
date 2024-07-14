@@ -15,13 +15,10 @@ ren %ZLIB_DIR% zlib-src
 
 tar -xf ngspice-42.tar.gz
 
-ren ngspice-42 ngspice-40
-ren ngspice-42_dll_64.7z ngspice-40_dll_64.7z
-
 if not exist 7zr.exe goto 7z_inst
 
 7zr x PortableGit-2.42.0.2-64-bit.7z.exe -o.\PortableGit
-7zr x ngspice-40_dll_64.7z -o.\
+7zr x ngspice-42_dll_64.7z -o.\
 
 rem for Fritzing 1.0.2
 UnZip.exe clipper_ver6.4.2.zip .\clipper1\6.4.2
@@ -59,7 +56,7 @@ echo 7z2301-x64.exe /S /D=%cd%\7z>>7z_inst.bat
 start /wait powershell "Start-Process -FilePath '7z_inst.bat' -WorkingDirectory '%cd%' -Verb RunAs -Wait"
 
 .\7z\7z x PortableGit-2.42.0.2-64-bit.7z.exe -o.\PortableGit
-.\7z\7z x ngspice-40_dll_64.7z -o.\
+.\7z\7z x ngspice-42_dll_64.7z -o.\
 
 exit
 

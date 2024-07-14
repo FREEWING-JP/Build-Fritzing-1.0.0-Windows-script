@@ -27,7 +27,7 @@ echo qmake
 C:/Qt/6.5.3/msvc2019_64/bin/qmake.exe phoenix.pro ^
   -spec win32-msvc ^
   INCLUDEPATH+="..\svgpp-1.3.0\include" ^
-  INCLUDEPATH+="..\ngspice-40\src\include"
+  INCLUDEPATH+="..\ngspice-42\src\include"
 
 C:/Qt/Tools/QtCreator/bin/jom/jom.exe qmake_all
 
