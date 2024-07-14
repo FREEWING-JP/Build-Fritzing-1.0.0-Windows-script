@@ -6,15 +6,17 @@ echo %0
 timeout /T 10 /NOBREAK
 cd /d \00_fritzing
 
-ren release64 Fritzing_102
+set Fritzing_XXX=Fritzing_103
 
-powershell compress-archive .\Fritzing_102 Fritzing_102.zip
+ren release64 %Fritzing_XXX%
 
-ren Fritzing_102 release64
+powershell compress-archive .\%Fritzing_XXX% %Fritzing_XXX%.zip
+
+ren %Fritzing_XXX% release64
 
 echo .
 echo ===
-dir Fritzing_102.zip
+dir %Fritzing_XXX%.zip
 rem Beep
 rundll32 user32.dll,MessageBeep
 timeout /T 1 /NOBREAK
