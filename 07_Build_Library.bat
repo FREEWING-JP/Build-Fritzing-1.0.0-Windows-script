@@ -94,7 +94,7 @@ cd ..
 
 rem for Fritzing 1.0.2
 echo Build clipper1 6.4.2 polyclipping
-cd .\clipper1\6.4.2\cpp
+cd .\clipper1-6.4.2\cpp
 
 rem create lib file SET(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)
 powershell -Command "gc CMakeLists.txt | %% { $_ -creplace 'PROJECT\(polyclipping\)', \"PROJECT(polyclipping)`r`nSET(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)\" } > CMakeLists.tmp"
