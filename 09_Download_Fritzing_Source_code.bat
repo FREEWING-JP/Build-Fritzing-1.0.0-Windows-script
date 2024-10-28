@@ -28,10 +28,15 @@ rem equivalent Fritzing 1.0.3 May 31, 2024
 git pull origin a7811ba0427e664c740b5616b10626f2d45fd8b3
 git checkout a7811ba0427e664c740b5616b10626f2d45fd8b3
 
-rem add git tag 1.0.3
+set Fritzing_hash=a8c6ef7cf66f7a42b9b233d6137f1b70a9573a25
+rem equivalent Fritzing 1.0.4 Oct 7, 2024
+git pull origin %Fritzing_hash%
+git checkout %Fritzing_hash%
+
+rem add git tag 1.0.4
 git config --global user.email "you@example.com"
 git config --global user.name "Your Name"
-git tag -a 1.0.3 -m "" a7811ba0427e664c740b5616b10626f2d45fd8b3
+git tag -a 1.0.4 -m "" %Fritzing_hash%
 
 git show --format='%%H' --no-patch
 
