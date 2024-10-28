@@ -1,5 +1,5 @@
 @echo off
-rem 10_Fix_Fritzing_Source_code.bat
+rem 11_Fix_Fritzing_Source_code.bat
 rem http://www.neko.ne.jp/~freewing/software/build_fritzing_100_windows/
 rem Copyright (c) 2023-2024 FREE WING,Y.Sakamoto
 echo %0

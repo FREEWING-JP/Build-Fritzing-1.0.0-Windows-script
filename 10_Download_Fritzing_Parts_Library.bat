@@ -1,5 +1,5 @@
 @echo off
-rem 09_Download_Fritzing_Parts_Library.bat
+rem 10_Download_Fritzing_Parts_Library.bat
 rem http://www.neko.ne.jp/~freewing/software/build_fritzing_100_windows/
 rem Copyright (c) 2023-2024 FREE WING,Y.Sakamoto
 echo %0

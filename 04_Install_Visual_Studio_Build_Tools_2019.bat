@@ -1,5 +1,5 @@
 @echo off
-rem 06_Install_Visual_Studio_Build_Tools_2019.bat
+rem 04_Install_Visual_Studio_Build_Tools_2019.bat
 rem http://www.neko.ne.jp/~freewing/software/build_fritzing_100_windows/
 rem Copyright (c) 2023 FREE WING,Y.Sakamoto
 echo %0
