@@ -11,9 +11,9 @@ Path=%cd%\PortableGit\bin;%Path%
 mkdir release64
 cd release64
 
-rem Commits on Jun 21, 2024 1.0.3 doesn't exist yet
+rem Commits on Sep 30, 2024
 echo https://github.com/fritzing/fritzing-parts
-git clone https://github.com/fritzing/fritzing-parts -b 1.0.2
+git clone https://github.com/fritzing/fritzing-parts -b 1.0.4
 
 cd ..
 
