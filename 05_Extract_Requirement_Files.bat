@@ -6,7 +6,7 @@ echo %0
 timeout /T 10 /NOBREAK
 cd /d \00_fritzing
 
-UnZip.exe boost_1_81_0.zip .
+UnZip.exe boost_1_85_0.zip .
 
 tar -xf zlib.tar.gz
 for /f "usebackq delims=" %%A in (`dir /b ZLIB-*`) do set ZLIB_DIR=%%A

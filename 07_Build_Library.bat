@@ -12,7 +12,7 @@ rem Visual Studio 2019 Build Tools
 call "C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\Common7\Tools\VsDevCmd.bat"
 
 echo Build Boost
-cd boost_1_81_0
+cd boost_1_85_0
 
 rem Visual Studio 16 2019 BuildTools VS2019 14.2
 call bootstrap.bat vc142

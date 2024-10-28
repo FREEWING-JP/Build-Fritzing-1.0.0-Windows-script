@@ -27,15 +27,15 @@ rem https://www.qt.io/download-qt-installer-oss
 echo Qt Qt6
 if not exist qt-unified-windows-x64-4.6.1-online.exe DownloadFile https://d13lb3tujbc8s0.cloudfront.net/onlineinstallers/qt-unified-windows-x64-4.6.1-online.exe qt-unified-windows-x64-4.6.1-online.exe
 
-rem https://www.boost.org/users/history/version_1_81_0.html
-echo Boost Version 1.81.0
-rem December 14th, 2022 17:44 GMT
-rem if not exist boost_1_81_0.zip DownloadFile https://boostorg.jfrog.io/artifactory/main/release/1.81.0/source/boost_1_81_0.zip boost_1_81_0.zip
+rem https://www.boost.org/users/history/version_1_85_0.html
+echo Boost Version 1.85.0
+rem April 15th, 2024 17:38 GMT
+if not exist boost_1_85_0.zip DownloadFile https://archives.boost.io/release/1.85.0/source/boost_1_85_0.zip boost_1_85_0.zip
 
-if not exist boost_1_81_0.zip DownloadFile https://sourceforge.net/projects/boost/files/boost/1.81.0/boost_1_81_0.zip boost_1_81_0.zip
+if not exist boost_1_85_0.zip DownloadFile https://sourceforge.net/projects/boost/files/boost/1.85.0/boost_1_85_0.zip boost_1_85_0.zip
 
 echo Check file hash for validate
-certutil -hashfile .\boost_1_81_0.zip SHA256 | findstr 6e689b266b27d4db57f648b1e5c905c8acd6716b46716a12f6fc73fc80af842e
+certutil -hashfile .\boost_1_85_0.zip SHA256 | findstr e712fe7eb1b9ec37ac25102525412fb4d74e638996443944025791f48f29408a
 if not "%ERRORLEVEL%" == "0" goto failed
 
 rem https://www.zlib.net/
@@ -65,7 +65,7 @@ if not exist PortableGit-2.42.0.2-64-bit.7z.exe goto failed
 if not exist 7zr.exe goto failed
 if not exist vs_BuildTools_2019.exe goto failed
 if not exist qt-unified-windows-x64-4.6.1-online.exe goto failed
-if not exist boost_1_81_0.zip goto failed
+if not exist boost_1_85_0.zip goto failed
 if not exist zlib.tar.gz goto failed
 if not exist ngspice-42.tar.gz goto failed
 if not exist ngspice-42_dll_64.7z goto failed
