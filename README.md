@@ -22,6 +22,10 @@ bitsadmin /TRANSFER hoge https://raw.githubusercontent.com/FREEWING-JP/Build-Fri
 * Wait an hour
 ```
 
+![ClipImage_20241028_142712_529](https://github.com/user-attachments/assets/e5e4fbf4-d4c5-42b7-8580-83737367361d)  
+![ClipImage_20241028_142942_938](https://github.com/user-attachments/assets/7fc6c5e8-69a7-400e-867e-ec8a69823dcc)  
+
+
 * Tested  
 Windows 11 Real  
 Windows 11 Windows Sandbox  
