@@ -42,27 +42,26 @@ pause
 
 :is_admin
 
-if "%Qt_agree%" == "" goto manual_agree
+if "%Qt_agree%" == "" goto manual_accept
 
-start SendKeys_Agree.vbs
-goto auto_agree
+start SendKeys_Accept.vbs
+goto auto_accept
 
 
-:manual_agree
+:manual_accept
 echo .
 echo .
 echo .
 echo ===
 echo (Lesser) GNU General Public License v3 obligations:
-echo [5525] Accept or Reject
+echo  Accept or Reject
 echo ===
-echo Type Accept
 rem Beep
 rundll32 user32.dll,MessageBeep
 pause
 
 
-:auto_agree
+:auto_accept
 
 echo cd /d %cd%>qt_inst.bat
 echo qt-unified-windows-x64-4.6.1-online.exe --root C:\Qt ^^>>qt_inst.bat

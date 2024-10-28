@@ -1,5 +1,5 @@
 @echo off
-rem 14_Open_phoenix_pro_with_Qt_Creator.bat
+rem 18_2nd_Launch_Fritzing.bat
 rem http://www.neko.ne.jp/~freewing/software/build_fritzing_100_windows/
 rem Copyright (c) 2023 FREE WING,Y.Sakamoto
 echo %0

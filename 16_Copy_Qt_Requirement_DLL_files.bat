@@ -1,5 +1,5 @@
 @echo off
-rem 18_Copy_Qt_Requirement_DLL_files.bat
+rem 16_Copy_Qt_Requirement_DLL_files.bat
 rem http://www.neko.ne.jp/~freewing/software/build_fritzing_100_windows/
 rem Copyright (c) 2023 FREE WING,Y.Sakamoto
 echo %0

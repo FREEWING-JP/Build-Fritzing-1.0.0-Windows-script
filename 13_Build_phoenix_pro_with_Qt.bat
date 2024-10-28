@@ -1,5 +1,5 @@
 @echo off
-rem 14_Open_phoenix_pro_with_Qt_Creator.bat
+rem 13_Build_phoenix_pro_with_Qt.bat
 rem http://www.neko.ne.jp/~freewing/software/build_fritzing_100_windows/
 rem Copyright (c) 2023 FREE WING,Y.Sakamoto
 echo %0
@@ -26,8 +26,11 @@ cd /d %currennt_dir%
 echo qmake
 C:/Qt/6.5.3/msvc2019_64/bin/qmake.exe phoenix.pro ^
   -spec win32-msvc ^
-  INCLUDEPATH+="..\svgpp-1.3.0\include" ^
   INCLUDEPATH+="..\ngspice-42\src\include"
+
+rem Use svgpp 1.3.1
+rem https://github.com/fritzing/fritzing-app/commit/0a53e1b4a5e9752a27d3f11157cc505f3691f20c
+rem  INCLUDEPATH+="..\svgpp-1.3.1\include"
 
 C:/Qt/Tools/QtCreator/bin/jom/jom.exe qmake_all
 
