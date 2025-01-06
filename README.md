@@ -1,10 +1,10 @@
 # Build-Fritzing-1.0.4-Windows-script
 Build Fritzing 1.0.4 Windows script
 
-2023/11/18 Update Build Fritzing 1.0.1  
-2024/01/11 Update Build Fritzing 1.0.2 (Reconfirmed on 2024/05/05)  
+2024/10/28 Update Build Fritzing 1.0.4 (Reconfirmed on 2025/01/05)  
 2024/07/14 Update Build Fritzing 1.0.3  
-2024/10/28 Update Build Fritzing 1.0.4  
+2024/01/11 Update Build Fritzing 1.0.2 (Reconfirmed on 2024/05/05)  
+2023/11/18 Update Build Fritzing 1.0.1  
 
 * How to Build Fritzing 1.0.4 from Source code in Windows with Visual Studio 2019  
 http://www.neko.ne.jp/~freewing/software/build_fritzing_100_windows/  
