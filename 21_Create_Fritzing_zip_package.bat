@@ -1,5 +1,5 @@
 @echo off
-rem 20_Create_Fritzing_zip_package.bat
+rem 21_Create_Fritzing_zip_package.bat
 rem http://www.neko.ne.jp/~freewing/software/build_fritzing_100_windows/
 rem Copyright (c) 2023-2024 FREE WING,Y.Sakamoto
 echo %0

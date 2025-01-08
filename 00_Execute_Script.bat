@@ -1,7 +1,7 @@
 @echo off
 rem 00_Execute_Script.bat
 rem http://www.neko.ne.jp/~freewing/software/build_fritzing_100_windows/
-rem Copyright (c) 2023 FREE WING,Y.Sakamoto
+rem Copyright (c) 2023-2024 FREE WING,Y.Sakamoto
 echo %0
 cd /d \00_fritzing
 
@@ -26,7 +26,8 @@ start /wait 17_1st_Build_Parts_DB_file.bat
 start /wait 18_2nd_Launch_Fritzing.bat
 
 start /wait 19_Organize_unnecessary_files.bat
-start /wait 20_Create_Fritzing_zip_package.bat
+start /wait 20_Fix_Language_Filename.bat
+start /wait 21_Create_Fritzing_zip_package.bat
 
 exit
 
