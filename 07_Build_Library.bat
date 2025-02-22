@@ -8,6 +8,12 @@ cd /d \00_fritzing
 
 Path=%cd%\PortableGit\bin;%Path%
 
+rem Ask for Visual Studio 2019 Build Tools Path
+set vsbuildtoolsend=\Common7\Tools\VsDevCmd.bat
+set /p "vsbuildtoolsinput=What is you Visual Studio 2019 Path? For example "C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools": "
+set vsbuildtools=%vsbuildtoolsinput%%vsbuildtoolsend%
+echo %vsbuildtools%
+
 rem Visual Studio 2019 Build Tools
 call "C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\Common7\Tools\VsDevCmd.bat"
 
