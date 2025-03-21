@@ -79,6 +79,14 @@ echo   install qt.qt6.653.qt5compat>>qt_inst.bat
 
 start /wait powershell "Start-Process -FilePath 'qt_inst.bat' -WorkingDirectory '%cd%' -Verb RunAs -Wait"
 
+if exist C:\Qt\Tools\QtCreator\bin\jom\jom.exe goto end
+
+echo QtCreator jom.exe
+cd /d \00_fritzing
+if not exist jom_1_1_4.zip DownloadFile https://download.qt.io/official_releases/jom/jom_1_1_4.zip jom_1_1_4.zip
+UnZip.exe jom_1_1_4.zip C:\Qt\Tools\QtCreator\bin\jom\
+
+:end
 exit
 
 
