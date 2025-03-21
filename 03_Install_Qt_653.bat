@@ -74,27 +74,14 @@ echo   --auto-answer telemetry-question=No ^^>>qt_inst.bat
 echo   install qt.qt6.653.win64_msvc2019_64 ^^>>qt_inst.bat
 echo   install qt.qt6.653.addons ^^>>qt_inst.bat
 echo   install qt.qt6.653.qt5compat>>qt_inst.bat
-echo   install qt.tools.qtcreator_gui ^^>>qt_inst.bat
 
 @echo on
 
 start /wait powershell "Start-Process -FilePath 'qt_inst.bat' -WorkingDirectory '%cd%' -Verb RunAs -Wait"
 
-if not exist C:\Qt\Tools\QtCreator\bin\jom\jom.exe goto failed
-
 exit
 
-:failed
-@echo off
-echo .
-echo ===
-echo failed
-echo ===
-:failed_beep
-rem Beep
-rundll32 user32.dll,MessageBeep
-timeout /T 5 /NOBREAK
 
-goto failed_beep
-
+rem include QtCreator
+echo   install qt.tools.qtcreator_gui ^^>>qt_inst.bat
 
