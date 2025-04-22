@@ -3,7 +3,10 @@ rem 00_Execute_Script.bat
 rem http://www.neko.ne.jp/~freewing/software/build_fritzing_100_windows/
 rem Copyright (c) 2023 FREE WING,Y.Sakamoto
 echo %0
-cd /d \00_fritzing
+rem Load configuration
+if exist qt_config.bat call qt_config.bat
+
+cd /d %FRITZING_WORKSPACE_DIR%
 
 start /wait 02_Download_Requirement_Files.bat
 start /wait 03_Install_Qt_653.bat

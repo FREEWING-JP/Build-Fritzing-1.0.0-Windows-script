@@ -6,6 +6,9 @@ echo %0
 timeout /T 10 /NOBREAK
 cd /d \00_fritzing
 
+rem Load Qt directory configuration
+if exist qt_config.bat call qt_config.bat
+
 Path=%cd%\PortableGit\bin;%Path%
 
 cd fritzing-app
@@ -25,15 +28,15 @@ exit
 set currennt_dir=%cd%
 
 echo qtenv2.bat
-call C:\Qt\6.5.3\msvc2019_64\bin\qtenv2.bat
+call %QT_INSTALL_DIR%\6.5.3\msvc2019_64\bin\qtenv2.bat
 
 echo x64 Native Tools Command Prompt for VS 2019
 call "C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\VC\Auxiliary\Build\vcvars64.bat"
 
 cd /d %currennt_dir%
 
-C:\Qt\6.5.3\msvc2019_64\bin\qmake.exe -o Makefile phoenix.pro "QMAKE_TARGET.arch=x86_64"
-C:\Qt\Tools\QtCreator\bin\jom\jom.exe -f Makefile.Debug compiler_uic_make_all
+%QT_INSTALL_DIR%\6.5.3\msvc2019_64\bin\qmake.exe -o Makefile phoenix.pro "QMAKE_TARGET.arch=x86_64"
+%QT_INSTALL_DIR%\Tools\QtCreator\bin\jom\jom.exe -f Makefile.Debug compiler_uic_make_all
 DIR ..\debug64\ui_*.h
 xcopy ..\debug64\*.h ..\fritzing_h\
 xcopy ..\fritzing_h\ ..\release64\

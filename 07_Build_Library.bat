@@ -6,6 +6,9 @@ echo %0
 timeout /T 10 /NOBREAK
 cd /d \00_fritzing
 
+rem Load Qt directory configuration
+if exist qt_config.bat call qt_config.bat
+
 Path=%cd%\PortableGit\bin;%Path%
 
 rem Visual Studio 2019 Build Tools
@@ -70,7 +73,7 @@ cd quazip-1.4
 
 dir ..\zlib-src\build64\Release\zlib.lib
 
-set Qt6_DIR=C:\Qt\6.5.3\msvc2019_64
+set Qt6_DIR=%QT_INSTALL_DIR%\6.5.3\msvc2019_64
 dir %Qt6_DIR%
 
 rmdir /S /Q build64

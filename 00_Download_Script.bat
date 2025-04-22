@@ -5,9 +5,21 @@ rem Copyright (c) 2023 FREE WING,Y.Sakamoto
 echo %0
 @echo off
 
+rem Configure Qt installation directory (default is C:\Qt)
+rem To change the Qt directory, set the QT_INSTALL_DIR environment variable before running this script
+rem See README_QT_DIRECTORY.md for detailed instructions
+if "%QT_INSTALL_DIR%" == "" set QT_INSTALL_DIR=F:\Qt
+echo Using Qt installation directory: %QT_INSTALL_DIR%
+
+rem Configure Fritzing workspace directory (default is \00_fritzing)
+rem To change the workspace directory, set the FRITZING_WORKSPACE_DIR environment variable before running this script
+rem See README_WORKSPACE_DIRECTORY.md for detailed instructions
+if "%FRITZING_WORKSPACE_DIR%" == "" set FRITZING_WORKSPACE_DIR=F:\00_fritzing
+echo Using Fritzing workspace directory: %FRITZING_WORKSPACE_DIR%
+
 cd \
-mkdir \00_fritzing
-cd /d \00_fritzing
+mkdir %FRITZING_WORKSPACE_DIR%
+cd /d %FRITZING_WORKSPACE_DIR%
 
 rem https://github.com/FREEWING-JP/CSharp_DownloadFile
 rem echo C# DownloadFile from URL
@@ -31,4 +43,9 @@ UnZip.exe main.zip .
 
 move Build-Fritzing-1.0.0-Windows-script-main\*.* .\
 rmdir Build-Fritzing-1.0.0-Windows-script-main
+
+rem Create environment variable file for other scripts
+echo set QT_INSTALL_DIR=%QT_INSTALL_DIR%> qt_config.bat
+echo set FRITZING_WORKSPACE_DIR=%FRITZING_WORKSPACE_DIR%>> qt_config.bat
+
 
