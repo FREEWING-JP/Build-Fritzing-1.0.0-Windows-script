@@ -8,13 +8,13 @@ echo %0
 rem Configure Qt installation directory (default is C:\Qt)
 rem To change the Qt directory, set the QT_INSTALL_DIR environment variable before running this script
 rem See README_QT_DIRECTORY.md for detailed instructions
-if "%QT_INSTALL_DIR%" == "" set QT_INSTALL_DIR=F:\Qt
+if "%QT_INSTALL_DIR%" == "" set QT_INSTALL_DIR=C:\Qt
 echo Using Qt installation directory: %QT_INSTALL_DIR%
 
 rem Configure Fritzing workspace directory (default is \00_fritzing)
 rem To change the workspace directory, set the FRITZING_WORKSPACE_DIR environment variable before running this script
 rem See README_WORKSPACE_DIRECTORY.md for detailed instructions
-if "%FRITZING_WORKSPACE_DIR%" == "" set FRITZING_WORKSPACE_DIR=F:\00_fritzing
+if "%FRITZING_WORKSPACE_DIR%" == "" set FRITZING_WORKSPACE_DIR=\00_fritzing
 echo Using Fritzing workspace directory: %FRITZING_WORKSPACE_DIR%
 
 cd \
