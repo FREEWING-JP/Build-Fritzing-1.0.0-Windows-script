@@ -35,10 +35,10 @@ bitsadmin /TRANSFER hoge https://raw.githubusercontent.com/FREEWING-JP/Build-Fri
 ![ClipImage_20241028_142942_938](https://github.com/user-attachments/assets/7fc6c5e8-69a7-400e-867e-ec8a69823dcc)
 
 
-* Tested
-Windows 11 Real
-Windows 11 Windows Sandbox
-Windows 10 Windows Sandbox
+* Tested  
+Windows 11 Real  
+Windows 11 Windows Sandbox  
+Windows 10 Windows Sandbox  
 
 * Fritzing 1.0.0を合法的に無料で使用する方法、Windows環境 VS2019でビルドする方法
 http://www.neko.ne.jp/~freewing/software/build_fritzing_100_windows/
