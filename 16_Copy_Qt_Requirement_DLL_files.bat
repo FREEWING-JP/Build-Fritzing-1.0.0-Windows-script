@@ -6,11 +6,14 @@ echo %0
 timeout /T 10 /NOBREAK
 cd /d \00_fritzing
 
+rem Load Qt directory configuration
+if exist qt_config.bat call qt_config.bat
+
 cd .\release64
 
 if not exist Fritzing.exe goto failed
 
-C:\Qt\6.5.3\msvc2019_64\bin\windeployqt6.exe Fritzing.exe
+%QT_INSTALL_DIR%\6.5.3\msvc2019_64\bin\windeployqt6.exe Fritzing.exe
 
 cd ..
 

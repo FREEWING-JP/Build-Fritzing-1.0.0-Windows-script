@@ -15,6 +15,10 @@ http://www.neko.ne.jp/~freewing/software/build_fritzing_100_windows/
 
 bitsadmin /TRANSFER hoge https://raw.githubusercontent.com/FREEWING-JP/Build-Fritzing-1.0.0-Windows-script/main/00_Download_Script.bat %cd%\00_Download_Script.bat
 
+# Optional: Set custom directories
+# set QT_INSTALL_DIR=D:\CustomQtPath
+# set FRITZING_WORKSPACE_DIR=D:\FritzingBuild
+
 00_Download_Script.bat
 
 00_Execute_Script.bat
@@ -22,8 +26,13 @@ bitsadmin /TRANSFER hoge https://raw.githubusercontent.com/FREEWING-JP/Build-Fri
 * Wait an hour
 ```
 
-![ClipImage_20241028_142712_529](https://github.com/user-attachments/assets/e5e4fbf4-d4c5-42b7-8580-83737367361d)  
-![ClipImage_20241028_142942_938](https://github.com/user-attachments/assets/7fc6c5e8-69a7-400e-867e-ec8a69823dcc)  
+* Customization Options
+  * You can change the Qt installation directory by setting the `QT_INSTALL_DIR` environment variable
+  * You can change the Fritzing workspace directory by setting the `FRITZING_WORKSPACE_DIR` environment variable
+  * See `README_QT_DIRECTORY.md` and `README_WORKSPACE_DIRECTORY.md` for details
+
+![ClipImage_20241028_142712_529](https://github.com/user-attachments/assets/e5e4fbf4-d4c5-42b7-8580-83737367361d)
+![ClipImage_20241028_142942_938](https://github.com/user-attachments/assets/7fc6c5e8-69a7-400e-867e-ec8a69823dcc)
 
 
 * Tested  
