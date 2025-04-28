@@ -18,7 +18,7 @@ bitsadmin /TRANSFER hoge https://raw.githubusercontent.com/FREEWING-JP/Build-Fri
 # Optional: Set custom directories
 # set QT_INSTALL_DIR=D:\CustomQtPath
 # set FRITZING_WORKSPACE_DIR=D:\FritzingBuild
-
+# set VS_INSTALL_DIR=D:\VisualStudio\2019\BuildTools
 00_Download_Script.bat
 
 00_Execute_Script.bat
