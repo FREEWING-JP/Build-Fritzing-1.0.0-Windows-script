@@ -5,7 +5,7 @@ rem Copyright (c) 2023 FREE WING,Y.Sakamoto
 echo %0
 timeout /T 10 /NOBREAK
 rem Load configuration
-if exist qt_config.bat call qt_config.bat
+if exist directories_config.bat call directories_config.bat
 
 cd /d %FRITZING_WORKSPACE_DIR%
 
