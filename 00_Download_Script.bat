@@ -5,17 +5,41 @@ rem Copyright (c) 2023 FREE WING,Y.Sakamoto
 echo %0
 @echo off
 
-rem Configure Qt installation directory (default is C:\Qt)
-rem To change the Qt directory, set the QT_INSTALL_DIR environment variable before running this script
-rem See README_QT_DIRECTORY.md for detailed instructions
-if "%QT_INSTALL_DIR%" == "" set QT_INSTALL_DIR=C:\Qt
-echo Using Qt installation directory: %QT_INSTALL_DIR%
+rem Load configuration from directories_config.bat if it exists
+rem Otherwise, use default values
+if exist directories_config.bat (
+    echo Loading configuration from directories_config.bat
+    call directories_config.bat
+) else (
+    echo directories_config.bat not found, creating with default values
+    rem Configure Qt installation directory (default is C:\Qt)
+    if "%QT_INSTALL_DIR%" == "" set QT_INSTALL_DIR=C:\Qt
 
-rem Configure Fritzing workspace directory (default is \00_fritzing)
-rem To change the workspace directory, set the FRITZING_WORKSPACE_DIR environment variable before running this script
-rem See README_WORKSPACE_DIRECTORY.md for detailed instructions
-if "%FRITZING_WORKSPACE_DIR%" == "" set FRITZING_WORKSPACE_DIR=\00_fritzing
+    rem Configure Fritzing workspace directory (default is \00_fritzing)
+    if "%FRITZING_WORKSPACE_DIR%" == "" set FRITZING_WORKSPACE_DIR=\00_fritzing
+
+    rem Configure Visual Studio installation directory
+    if "%VS_INSTALL_DIR%" == "" set VS_INSTALL_DIR=C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools
+
+    rem Create the configuration file
+    echo @echo off> directories_config.bat
+    echo rem directories_config.bat>> directories_config.bat
+    echo rem Configuration file for directory paths used in Fritzing build scripts>> directories_config.bat
+    echo rem This file is meant to be persistent and can be edited manually>> directories_config.bat
+    echo.>> directories_config.bat
+    echo rem Qt installation directory>> directories_config.bat
+    echo set QT_INSTALL_DIR=%QT_INSTALL_DIR%>> directories_config.bat
+    echo.>> directories_config.bat
+    echo rem Fritzing workspace directory>> directories_config.bat
+    echo set FRITZING_WORKSPACE_DIR=%FRITZING_WORKSPACE_DIR%>> directories_config.bat
+    echo.>> directories_config.bat
+    echo rem Visual Studio installation directory>> directories_config.bat
+    echo set VS_INSTALL_DIR=%VS_INSTALL_DIR%>> directories_config.bat
+)
+
+echo Using Qt installation directory: %QT_INSTALL_DIR%
 echo Using Fritzing workspace directory: %FRITZING_WORKSPACE_DIR%
+echo Using Visual Studio directory: %VS_INSTALL_DIR%
 
 cd \
 mkdir %FRITZING_WORKSPACE_DIR%
@@ -44,8 +68,24 @@ UnZip.exe main.zip .
 move Build-Fritzing-1.0.0-Windows-script-main\*.* .\
 rmdir Build-Fritzing-1.0.0-Windows-script-main
 
-rem Create environment variable file for other scripts
-echo set QT_INSTALL_DIR=%QT_INSTALL_DIR%> qt_config.bat
-echo set FRITZING_WORKSPACE_DIR=%FRITZING_WORKSPACE_DIR%>> qt_config.bat
+rem Update directories_config.bat if it already exists
+if not exist directories_config.bat (
+    rem Create the configuration file
+    echo @echo off> directories_config.bat
+    echo rem directories_config.bat>> directories_config.bat
+    echo rem Configuration file for directory paths used in Fritzing build scripts>> directories_config.bat
+    echo rem This file is meant to be persistent and can be edited manually>> directories_config.bat
+    echo.>> directories_config.bat
+    echo rem Qt installation directory>> directories_config.bat
+    echo set QT_INSTALL_DIR=%QT_INSTALL_DIR%>> directories_config.bat
+    echo.>> directories_config.bat
+    echo rem Fritzing workspace directory>> directories_config.bat
+    echo set FRITZING_WORKSPACE_DIR=%FRITZING_WORKSPACE_DIR%>> directories_config.bat
+    echo.>> directories_config.bat
+    echo rem Visual Studio installation directory>> directories_config.bat
+    echo set VS_INSTALL_DIR=%VS_INSTALL_DIR%>> directories_config.bat
+    echo.>> directories_config.bat
+    echo rem Created by 00_Download_Script.bat>> directories_config.bat
+)
 
 

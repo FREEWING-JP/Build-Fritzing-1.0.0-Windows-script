@@ -4,10 +4,10 @@ rem http://www.neko.ne.jp/~freewing/software/build_fritzing_100_windows/
 rem Copyright (c) 2023-2024 FREE WING,Y.Sakamoto
 echo %0
 timeout /T 10 /NOBREAK
-cd /d \00_fritzing
+rem Load configuration
+if exist directories_config.bat call directories_config.bat
 
-rem Load Qt directory configuration
-if exist qt_config.bat call qt_config.bat
+cd /d %FRITZING_WORKSPACE_DIR%
 
 copy .\libgit2\build64\Release\git2.dll .\release64
 copy .\zlib-src\build64\Release\zlib.dll .\release64
