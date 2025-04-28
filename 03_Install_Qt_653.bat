@@ -8,7 +8,7 @@ timeout /T 10 /NOBREAK
 cd /d \00_fritzing
 
 rem Load Qt directory configuration
-if exist qt_config.bat call qt_config.bat
+if exist directories_config.bat call directories_config.bat
 
 if exist "%QT_INSTALL_DIR%\6.5.3\msvc2019_64" exit
 
