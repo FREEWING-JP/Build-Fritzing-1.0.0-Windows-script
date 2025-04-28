@@ -4,7 +4,7 @@ rem Configuration file for directory paths used in Fritzing build scripts
 rem This file is meant to be persistent and can be edited manually
 
 rem Qt installation directory (default is C:\Qt)
-set QT_INSTALL_DIR=F:\Qt
+set QT_INSTALL_DIR=C:\Qt
 
 rem Fritzing workspace directory (default is \00_fritzing)
 set FRITZING_WORKSPACE_DIR=\00_fritzing
