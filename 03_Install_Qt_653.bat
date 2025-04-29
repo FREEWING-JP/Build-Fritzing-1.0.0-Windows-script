@@ -7,7 +7,10 @@ timeout /T 10 /NOBREAK
 @echo off
 cd /d \00_fritzing
 
-if exist "C:\Qt\6.5.3\msvc2019_64" exit
+rem Load Qt directory configuration
+if exist directories_config.bat call directories_config.bat
+
+if exist "%QT_INSTALL_DIR%\6.5.3\msvc2019_64" exit
 
 
 echo .
@@ -19,8 +22,8 @@ echo ===
 echo Input Qt Account
 rem Beep
 rundll32 user32.dll,MessageBeep
-if "%Qt_email%" == "" set /p Qt_email=Qt Account your_email ? 
-if "%Qt_passw%" == "" set /p Qt_passw=Qt Account your_password ? 
+if "%Qt_email%" == "" set /p Qt_email=Qt Account your_email ?
+if "%Qt_passw%" == "" set /p Qt_passw=Qt Account your_password ?
 
 cls
 
@@ -64,7 +67,7 @@ pause
 :auto_accept
 
 echo cd /d %cd%>qt_inst.bat
-echo qt-unified-windows-x64-4.6.1-online.exe --root C:\Qt ^^>>qt_inst.bat
+echo qt-unified-windows-x64-4.6.1-online.exe --root %QT_INSTALL_DIR% ^^>>qt_inst.bat
 echo   --email %Qt_email% ^^>>qt_inst.bat
 echo   --pw    %Qt_passw% ^^>>qt_inst.bat
 echo   --accept-licenses ^^>>qt_inst.bat
@@ -79,12 +82,15 @@ echo   install qt.qt6.653.qt5compat>>qt_inst.bat
 
 start /wait powershell "Start-Process -FilePath 'qt_inst.bat' -WorkingDirectory '%cd%' -Verb RunAs -Wait"
 
-if exist C:\Qt\Tools\QtCreator\bin\jom\jom.exe goto end
+if exist %QT_INSTALL_DIR%\Tools\QtCreator\bin\jom\jom.exe goto end
 
 echo QtCreator jom.exe
 cd /d \00_fritzing
 if not exist jom_1_1_4.zip DownloadFile https://download.qt.io/official_releases/jom/jom_1_1_4.zip jom_1_1_4.zip
-UnZip.exe jom_1_1_4.zip C:\Qt\Tools\QtCreator\bin\jom\
+
+rem Create jom directory if it doesn't exist
+if not exist %QT_INSTALL_DIR%\Tools\QtCreator\bin\jom mkdir %QT_INSTALL_DIR%\Tools\QtCreator\bin\jom
+UnZip.exe jom_1_1_4.zip %QT_INSTALL_DIR%\Tools\QtCreator\bin\jom\
 
 :end
 exit
