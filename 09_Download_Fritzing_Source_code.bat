@@ -25,8 +25,8 @@ rem git pull origin dbdbe34c843677df721c7b3fc3e32c0f737e7e95
 rem git checkout dbdbe34c843677df721c7b3fc3e32c0f737e7e95
 
 rem equivalent Fritzing 1.0.3 May 31, 2024
-git pull origin a7811ba0427e664c740b5616b10626f2d45fd8b3
-git checkout a7811ba0427e664c740b5616b10626f2d45fd8b3
+rem git pull origin a7811ba0427e664c740b5616b10626f2d45fd8b3
+rem git checkout a7811ba0427e664c740b5616b10626f2d45fd8b3
 
 set Fritzing_hash=a8c6ef7cf66f7a42b9b233d6137f1b70a9573a25
 rem equivalent Fritzing 1.0.4 Oct 7, 2024
