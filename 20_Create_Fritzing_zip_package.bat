@@ -6,7 +6,7 @@ echo %0
 timeout /T 10 /NOBREAK
 cd /d \00_fritzing
 
-set Fritzing_XXX=Fritzing_104
+set Fritzing_XXX=Fritzing_105
 
 ren release64 %Fritzing_XXX%
 

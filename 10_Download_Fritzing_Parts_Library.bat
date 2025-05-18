@@ -13,7 +13,7 @@ cd release64
 
 rem Commits on Sep 30, 2024
 echo https://github.com/fritzing/fritzing-parts
-git clone https://github.com/fritzing/fritzing-parts -b 1.0.4
+git clone https://github.com/fritzing/fritzing-parts -b 1.0.5
 
 cd ..
 

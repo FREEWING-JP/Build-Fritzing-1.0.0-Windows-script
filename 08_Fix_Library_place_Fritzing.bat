@@ -15,5 +15,8 @@ xcopy .\quazip-6.5.3-1.4\bin .\quazip-6.5.3-1.4\build64\Release\
 xcopy .\quazip-6.5.3-1.4\lib\*.lib .\quazip-6.5.3-1.4\build64\Release\
 dir .\quazip-6.5.3-1.4\build64\Release\
 
+rem https://github.com/fritzing/fritzing-app/commit/ba8ab8760d01dc0870299f8456940524f9b73a5c
+xcopy /E .\quazip-6.5.3-1.4 .\quazip-6.5.3-1.4intuisphere\
+
 exit
 
