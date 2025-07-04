@@ -4,9 +4,12 @@ rem http://www.neko.ne.jp/~freewing/software/build_fritzing_100_windows/
 rem Copyright (c) 2023 FREE WING,Y.Sakamoto
 echo %0
 timeout /T 10 /NOBREAK
-cd /d \00_fritzing
+rem Load configuration
+if exist directories_config.bat call directories_config.bat
 
-if exist "C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools" exit
+cd /d %FRITZING_WORKSPACE_DIR%
+
+if exist "%VS_INSTALL_DIR%" exit
 
 
 @echo off
@@ -49,6 +52,7 @@ echo } >> VSBT_VS2019.vsconfig
 
 set VSDIR=%cd%
 vs_BuildTools_2019.exe --config %VSDIR%\VSBT_VS2019.vsconfig ^
+  --installPath "%VS_INSTALL_DIR%" ^
   --norestart --passive --wait
 
 exit

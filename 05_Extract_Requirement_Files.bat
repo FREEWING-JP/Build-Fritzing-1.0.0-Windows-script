@@ -4,7 +4,10 @@ rem http://www.neko.ne.jp/~freewing/software/build_fritzing_100_windows/
 rem Copyright (c) 2023-2024 FREE WING,Y.Sakamoto
 echo %0
 timeout /T 10 /NOBREAK
-cd /d \00_fritzing
+rem Load configuration
+if exist directories_config.bat call directories_config.bat
+
+cd /d %FRITZING_WORKSPACE_DIR%
 
 UnZip.exe boost_1_85_0.zip .
 
@@ -55,8 +58,9 @@ echo 7z2301-x64.exe /S /D=%cd%\7z>>7z_inst.bat
 
 start /wait powershell "Start-Process -FilePath '7z_inst.bat' -WorkingDirectory '%cd%' -Verb RunAs -Wait"
 
+
+
 .\7z\7z x PortableGit-2.42.0.2-64-bit.7z.exe -o.\PortableGit
 .\7z\7z x ngspice-42_dll_64.7z -o.\
 
 exit
-

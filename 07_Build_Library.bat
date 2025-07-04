@@ -4,12 +4,15 @@ rem http://www.neko.ne.jp/~freewing/software/build_fritzing_100_windows/
 rem Copyright (c) 2023-2024 FREE WING,Y.Sakamoto
 echo %0
 timeout /T 10 /NOBREAK
-cd /d \00_fritzing
+rem Load configuration
+if exist directories_config.bat call directories_config.bat
+
+cd /d %FRITZING_WORKSPACE_DIR%
 
 Path=%cd%\PortableGit\bin;%Path%
 
 rem Visual Studio 2019 Build Tools
-call "C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\Common7\Tools\VsDevCmd.bat"
+call "%VS_INSTALL_DIR%\Common7\Tools\VsDevCmd.bat"
 
 echo Build Boost
 cd boost_1_85_0
@@ -70,7 +73,7 @@ cd quazip-1.4
 
 dir ..\zlib-src\build64\Release\zlib.lib
 
-set Qt6_DIR=C:\Qt\6.5.3\msvc2019_64
+set Qt6_DIR=%QT_INSTALL_DIR%\6.5.3\msvc2019_64
 dir %Qt6_DIR%
 
 rmdir /S /Q build64

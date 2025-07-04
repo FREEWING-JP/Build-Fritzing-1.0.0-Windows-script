@@ -4,13 +4,16 @@ rem http://www.neko.ne.jp/~freewing/software/build_fritzing_100_windows/
 rem Copyright (c) 2023 FREE WING,Y.Sakamoto
 echo %0
 timeout /T 10 /NOBREAK
-cd /d \00_fritzing
+rem Load configuration
+if exist directories_config.bat call directories_config.bat
+
+cd /d %FRITZING_WORKSPACE_DIR%
 
 cd .\release64
 
 if not exist Fritzing.exe goto failed
 
-C:\Qt\6.5.3\msvc2019_64\bin\windeployqt6.exe Fritzing.exe
+%QT_INSTALL_DIR%\6.5.3\msvc2019_64\bin\windeployqt6.exe Fritzing.exe
 
 cd ..
 
